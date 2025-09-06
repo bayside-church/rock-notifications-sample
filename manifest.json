@@ -1,0 +1,53 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.23/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.23",
+    "version": "1.0.0",
+    "id": "INSERT RANDOM GUID HERE",
+    "developer": {
+        "name": "Rock RMS",
+        "websiteUrl": "INSERT YOUR WEBSITE URL HERE - NOT IMPORTANT",
+        "privacyUrl": "INSERT PRIVACY POLICY / TERMS HERE  - INTERNAL / NOT IMPORTANT",
+        "termsOfUseUrl": "INSERT PRIVACY POLICY / TERMS HERE  - INTERNAL / NOT IMPORTANT"
+    },
+    "name": {
+        "short": "Rock Notifications",
+        "full": "Rock Notifications"
+    },
+    "description": {
+        "short": "Activity-feed notifications from Rock.",
+        "full": "Sends Teams activity-feed notifications with link to Rock."
+    },
+    "icons": {
+        "outline": "outline.png",
+        "color": "color.png"
+    },
+    "accentColor": "#3c7f6c",
+    "webApplicationInfo": {
+        "id": "GUID OF APP REGISTRATION FROM MICROSOFT",
+        "resource": "api://GUID OF APP REGISTRATION FROM MICROSOFT"
+    },
+    "activities": {
+        "activityTypes": [
+            {
+                "type": "rockAlert",
+                "description": "Notification from Rock",
+                "templateText": "{title} — {summary}"
+            }
+        ]
+    },
+    "staticTabs": [
+        {
+            "entityId": "home",
+            "name": "Rock Notifications",
+            "contentUrl": "URL OF ROCK PAGE WITH TEAMS LAUNCH ACTION THAT WILL BE CREATED / MENTIONED IN RECIPE",
+            "websiteUrl": "YOUR ROCK DOMAIN",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "defaultInstallScope": "personal",
+    "validDomains": [
+        "YOUR ROCK DOMAIN"
+    ]
+}
